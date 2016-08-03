@@ -60,8 +60,8 @@ files.list <- function(profileId, results=10, scope='', sortField='', sortOrder=
       req.q.string <- paste0(q.string,"&pageToken=",pageToken)
     } else {
       req.q.string <- q.string
-    }
-    req.url <- paste0("https://www.googleapis.com/dfareporting/v2.2/userprofiles/",profileId,"/files")
+    3
+    req.url <- paste0("https://www.googleapis.com/dfareporting/v2.3/userprofiles/",profileId,"/files")
     response <- api.request(req.url,querystring=req.q.string)
     response <- fromJSON(response)
     
